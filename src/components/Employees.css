@@ -1,0 +1,56 @@
+.employees-section {
+  display: flex;
+  width: 80%;
+  margin: 3rem auto 3rem auto;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.detail-header {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.employees-title {
+  width: 100%;
+  text-align: center;
+}
+
+.employees-section a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  width: 40%;
+  background-color: rgb(232, 248, 240);
+  border: 1px solid gray;
+  border-radius: 12px;
+  padding: 10px;
+}
+.employees-section a:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.error-section {
+  text-align: center;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  color: red;
+}
+
+.error {
+  font-size: 75px;
+  font-style: italic;
+}
+
+.the-great-dom {
+  max-width: 250px;
+}
+
+.the-great-dom-container {
+  display: flex;
+  justify-content: center;
+}

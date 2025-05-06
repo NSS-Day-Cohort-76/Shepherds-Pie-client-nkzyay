@@ -1,0 +1,99 @@
+.order-details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3rem auto;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 20px;
+  width: 70%;
+}
+
+.customer-info {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 20px;
+}
+
+.customer-detail-title .customer-detail-info {
+  display: flex;
+}
+.order-section,
+.pizza-section {
+  border-top: 1px solid black;
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  /* border-bottom: 1px solid black; */
+}
+
+.customer-detail {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  font-weight: bold;
+}
+.add-pizza-button {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.pizza-details {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  align-items: center;
+  width: 150%;
+  border: 1px solid black;
+  justify-content: space-between;
+  background-color: rgb(227, 223, 223);
+  font-weight: bold;
+}
+
+.pizza-detail {
+  display: flex;
+  padding: 20px;
+}
+
+.pizza-button:first-of-type {
+  margin-right: 10px;
+}
+
+.order-button-container {
+  display: flex;
+  width: 125%;
+  justify-content: space-evenly;
+}
+
+.order-button-container .button {
+  width: 15%;
+}
+
+.order-details {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+  min-width: 70%;
+  font-weight: bold;
+}
+
+.total,
+.tip,
+.created {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: 7px;
+}
+
+.tip-amount {
+  width: 10%;
+  display: flex;
+}

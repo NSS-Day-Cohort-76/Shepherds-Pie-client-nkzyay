@@ -1,0 +1,709 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "name": "Alice Thompson",
+      "address": "123 Main St, Springfield, IL 62704",
+      "phone": 5551111,
+      "email": "alice@example.com",
+      "isAssigned": true,
+      "isAdmin": false
+    },
+    {
+      "id": 2,
+      "name": "Bob Reynolds",
+      "address": "456 Side St, Madison, WI 53703",
+      "phone": 4444444,
+      "email": "bob@example.com",
+      "isAssigned": true,
+      "isAdmin": true
+    },
+    {
+      "id": 3,
+      "name": "Charlie Nguyen",
+      "address": "789 Broad St, Columbus, OH 43215",
+      "phone": 5553333,
+      "email": "charlie@example.com",
+      "isAssigned": true,
+      "isAdmin": false
+    },
+    {
+      "id": 4,
+      "name": "Diana Foster",
+      "address": "321 Oak St, Austin, TX 73301",
+      "phone": 5554444,
+      "email": "diana@example.com",
+      "isAssigned": true,
+      "isAdmin": false
+    },
+    {
+      "id": 5,
+      "name": "Ethan Morales",
+      "address": "654 Pine St, Denver, CO 80203",
+      "phone": 5555555,
+      "email": "ethan@example.com",
+      "isAssigned": true,
+      "isAdmin": false
+    },
+    {
+      "id": 6,
+      "name": "Fiona Zhang",
+      "address": "987 Cedar St, Seattle, WA 98101",
+      "phone": 5556666,
+      "email": "fiona@example.com",
+      "isAssigned": false,
+      "isAdmin": true
+    },
+    {
+      "id": 7,
+      "name": "George Patel",
+      "address": "135 Maple St, Portland, OR 97205",
+      "phone": 5557777,
+      "email": "georgeyboy@example.com",
+      "isAssigned": true,
+      "isAdmin": false
+    },
+    {
+      "id": 8,
+      "name": "Hannah Romero",
+      "address": "246 Birch St, Phoenix, AZ 85004",
+      "phone": 5558888,
+      "email": "hannah@example.com",
+      "isAssigned": true,
+      "isAdmin": false
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "name": "Dana",
+      "address": "101 First Ave",
+      "phone": 5554444,
+      "email": "dana@example.com"
+    },
+    {
+      "id": 2,
+      "name": "Eli",
+      "address": "202 Second Ave",
+      "phone": 5555555,
+      "email": "eli@example.com"
+    },
+    {
+      "id": 3,
+      "name": "Sara",
+      "address": "303 Third Ave",
+      "phone": 5556666,
+      "email": "sara@example.com"
+    },
+    {
+      "id": 4,
+      "name": "Mark",
+      "address": "404 Fourth Ave",
+      "phone": 5557777,
+      "email": "mark@example.com"
+    },
+    {
+      "id": 5,
+      "name": "Jill",
+      "address": "505 Fifth Ave",
+      "phone": 5558888,
+      "email": "jill@example.com"
+    },
+    {
+      "id": 6,
+      "name": "Tom",
+      "address": "606 Sixth Ave",
+      "phone": 5559999,
+      "email": "tom@example.com"
+    },
+    {
+      "id": 7,
+      "name": "Lucy",
+      "address": "707 Seventh Ave",
+      "phone": 5550000,
+      "email": "lucy@example.com"
+    },
+    {
+      "id": 8,
+      "name": "Leo",
+      "address": "808 Eighth Ave",
+      "phone": 5551111,
+      "email": "leo@example.com"
+    },
+    {
+      "id": 9,
+      "name": "Anna",
+      "address": "909 Ninth Ave",
+      "phone": 5552222,
+      "email": "anna@example.com"
+    },
+    {
+      "id": 10,
+      "name": "Eve",
+      "address": "1010 Tenth Ave",
+      "phone": 5553333,
+      "email": "eve@example.com"
+    },
+    {
+      "id": 11,
+      "name": "Paul",
+      "address": "1111 Eleventh Ave",
+      "phone": 5554444,
+      "email": "paul@example.com"
+    },
+    {
+      "id": 12,
+      "name": "Clara",
+      "address": "1212 Twelfth Ave",
+      "phone": 5555555,
+      "email": "clara@example.com"
+    },
+    {
+      "id": 13,
+      "name": "Grace",
+      "address": "1313 Thirteenth Ave",
+      "phone": 5556666,
+      "email": "grace@example.com"
+    },
+    {
+      "id": 14,
+      "name": "George",
+      "address": "1414 Fourteenth Ave",
+      "phone": 5557777,
+      "email": "george@example.com"
+    },
+    {
+      "id": 15,
+      "name": "Victor",
+      "address": "1515 Fifteenth Ave",
+      "phone": 5558888,
+      "email": "victor@example.com"
+    },
+    {
+      "name": "Luke Davids",
+      "address": "111 Lukey Lane",
+      "phone": "111111",
+      "email": "lukey@lukeylane.com",
+      "tableNumber": "",
+      "id": 16
+    },
+    {
+      "name": "Brit Beaty",
+      "address": "999 Where AM I Dr",
+      "phone": "999-999-999",
+      "email": "brit@enron.com",
+      "tableNumber": "",
+      "id": 17
+    }
+  ],
+  "orders": [
+    {
+      "id": 5,
+      "customerId": 5,
+      "orderTime": "2025-04-28T10:20:00Z",
+      "tableNumber": 2,
+      "status": "Completed",
+      "gratuity": 2,
+      "totalCost": 18,
+      "takenByEmployeeId": 2,
+      "deliveredByEmployeeId": 3,
+      "monthId": 4
+    },
+    {
+      "id": 6,
+      "customerId": 6,
+      "orderTime": "2025-04-27T21:10:00Z",
+      "tableNumber": 6,
+      "status": "Pending",
+      "gratuity": 6,
+      "totalCost": 22,
+      "takenByEmployeeId": 4,
+      "deliveredByEmployeeId": null,
+      "monthId": 4
+    },
+    {
+      "id": 7,
+      "customerId": 7,
+      "orderTime": "2025-04-25T17:15:00Z",
+      "tableNumber": 4,
+      "status": "Completed",
+      "gratuity": 1,
+      "totalCost": 19,
+      "takenByEmployeeId": 3,
+      "deliveredByEmployeeId": 2,
+      "monthId": 4
+    },
+    {
+      "id": 8,
+      "customerId": 8,
+      "orderTime": "2025-04-24T13:05:00Z",
+      "tableNumber": null,
+      "status": "Pending",
+      "gratuity": 0,
+      "totalCost": 12,
+      "takenByEmployeeId": 1,
+      "deliveredByEmployeeId": null,
+      "monthId": 4
+    },
+    {
+      "id": 9,
+      "customerId": 9,
+      "orderTime": "2025-04-23T11:40:00Z",
+      "tableNumber": 7,
+      "status": "Completed",
+      "gratuity": 7,
+      "totalCost": 25,
+      "takenByEmployeeId": 2,
+      "deliveredByEmployeeId": 4,
+      "monthId": 4
+    },
+    {
+      "id": 10,
+      "customerId": 4,
+      "orderTime": "2025-05-02T14:15:00Z",
+      "tableNumber": 2,
+      "status": "Pending",
+      "gratuity": 4,
+      "totalCost": 22,
+      "takenByEmployeeId": 1,
+      "deliveredByEmployeeId": null,
+      "monthId": 5
+    },
+    {
+      "id": 11,
+      "customerId": 5,
+      "orderTime": "2025-05-02T17:45:00Z",
+      "tableNumber": 6,
+      "status": "In Progress",
+      "gratuity": 6,
+      "totalCost": 30,
+      "takenByEmployeeId": 3,
+      "deliveredByEmployeeId": 2,
+      "monthId": 5
+    },
+    {
+      "id": 13,
+      "customerId": 7,
+      "orderTime": "2025-01-22T18:50:00Z",
+      "tableNumber": null,
+      "status": "Pending",
+      "gratuity": 2,
+      "totalCost": 16,
+      "takenByEmployeeId": 2,
+      "deliveredByEmployeeId": null,
+      "monthId": 1
+    },
+    {
+      "id": 14,
+      "customerId": 8,
+      "tableNumber": 3,
+      "status": "Completed",
+      "gratuity": 0,
+      "totalCost": 28,
+      "takenByEmployeeId": 3,
+      "monthId": 2
+    },
+    {
+      "id": 16,
+      "customerId": 1,
+      "orderTime": "2025-03-05T19:00:00Z",
+      "tableNumber": 5,
+      "status": "Completed",
+      "gratuity": 4,
+      "totalCost": 21,
+      "takenByEmployeeId": 1,
+      "deliveredByEmployeeId": 3,
+      "monthId": 3
+    },
+    {
+      "id": 17,
+      "customerId": 2,
+      "orderTime": "2025-03-12T12:45:00Z",
+      "tableNumber": 6,
+      "status": "Pending",
+      "gratuity": 1,
+      "totalCost": 17,
+      "takenByEmployeeId": 2,
+      "deliveredByEmployeeId": null,
+      "monthId": 3
+    },
+    {
+      "id": 18,
+      "customerId": 3,
+      "orderTime": "2025-03-20T15:30:00Z",
+      "tableNumber": null,
+      "status": "Completed",
+      "gratuity": 3,
+      "totalCost": 19,
+      "takenByEmployeeId": 3,
+      "deliveredByEmployeeId": 2,
+      "monthId": 3
+    },
+    {
+      "id": 19,
+      "customerId": 4,
+      "orderTime": "2025-04-01T14:25:00Z",
+      "tableNumber": 7,
+      "status": "Pending",
+      "gratuity": 2,
+      "totalCost": 20,
+      "takenByEmployeeId": 4,
+      "deliveredByEmployeeId": null,
+      "monthId": 4
+    },
+    {
+      "id": 20,
+      "customerId": 5,
+      "orderTime": "2025-04-05T11:15:00Z",
+      "tableNumber": 1,
+      "status": "Completed",
+      "gratuity": 5,
+      "totalCost": 27,
+      "takenByEmployeeId": 1,
+      "deliveredByEmployeeId": 3,
+      "monthId": 4
+    },
+    {
+      "id": 21,
+      "customerId": 6,
+      "orderTime": "2025-04-09T13:50:00Z",
+      "tableNumber": 2,
+      "status": "Pending",
+      "gratuity": 0,
+      "totalCost": 13,
+      "takenByEmployeeId": 2,
+      "deliveredByEmployeeId": null,
+      "monthId": 4
+    },
+    {
+      "id": 22,
+      "customerId": 7,
+      "orderTime": "2025-04-12T10:30:00Z",
+      "tableNumber": 3,
+      "status": "Completed",
+      "gratuity": 2,
+      "totalCost": 15,
+      "takenByEmployeeId": 3,
+      "deliveredByEmployeeId": 1,
+      "monthId": 4
+    },
+    {
+      "id": 23,
+      "customerId": 8,
+      "orderTime": "2025-04-15T19:20:00Z",
+      "tableNumber": 4,
+      "status": "Pending",
+      "gratuity": 1,
+      "totalCost": 18,
+      "takenByEmployeeId": 4,
+      "deliveredByEmployeeId": null,
+      "monthId": 4
+    },
+    {
+      "id": 24,
+      "customerId": 9,
+      "orderTime": "2025-04-18T15:10:00Z",
+      "tableNumber": 5,
+      "status": "Completed",
+      "gratuity": 4,
+      "totalCost": 29,
+      "takenByEmployeeId": 1,
+      "deliveredByEmployeeId": 2,
+      "monthId": 4
+    },
+    {
+      "id": 25,
+      "customerId": 1,
+      "orderTime": "2025-04-21T16:05:00Z",
+      "tableNumber": null,
+      "status": "Pending",
+      "gratuity": 0,
+      "totalCost": 10,
+      "takenByEmployeeId": 2,
+      "deliveredByEmployeeId": null,
+      "monthId": 4
+    },
+    {
+      "id": 26,
+      "customerId": 2,
+      "orderTime": "2025-04-22T18:45:00Z",
+      "tableNumber": 6,
+      "status": "Completed",
+      "gratuity": 3,
+      "totalCost": 22,
+      "takenByEmployeeId": 3,
+      "deliveredByEmployeeId": 4,
+      "monthId": 4
+    },
+    {
+      "id": 27,
+      "customerId": 3,
+      "orderTime": "2025-04-26T11:50:00Z",
+      "tableNumber": 7,
+      "status": "Pending",
+      "gratuity": 2,
+      "totalCost": 16,
+      "takenByEmployeeId": 4,
+      "deliveredByEmployeeId": null,
+      "monthId": 4
+    },
+    {
+      "id": 28,
+      "customerId": 4,
+      "orderTime": "2025-04-29T12:30:00Z",
+      "tableNumber": 1,
+      "status": "Completed",
+      "gratuity": 5,
+      "totalCost": 26,
+      "takenByEmployeeId": 1,
+      "deliveredByEmployeeId": 3,
+      "monthId": 4
+    },
+    {
+      "id": 29,
+      "customerId": 5,
+      "orderTime": "2025-05-01T13:35:00Z",
+      "tableNumber": 2,
+      "status": "Pending",
+      "gratuity": 3,
+      "totalCost": 19,
+      "takenByEmployeeId": 2,
+      "deliveredByEmployeeId": null,
+      "monthId": 5
+    },
+    {
+      "id": 30,
+      "customerId": 6,
+      "orderTime": "2025-05-02T11:10:00Z",
+      "tableNumber": 3,
+      "status": "Completed",
+      "gratuity": 6,
+      "totalCost": 30,
+      "takenByEmployeeId": 3,
+      "deliveredByEmployeeId": 4,
+      "monthId": 5
+    },
+    {
+      "id": 31,
+      "customerId": 7,
+      "orderTime": "2025-05-02T16:20:00Z",
+      "tableNumber": 4,
+      "status": "Pending",
+      "gratuity": 4,
+      "totalCost": 21,
+      "takenByEmployeeId": 4,
+      "deliveredByEmployeeId": null,
+      "monthId": 5
+    },
+    {
+      "customerId": 16,
+      "orderTime": "2025-05-06T19:17:45.071Z",
+      "tableNumber": null,
+      "status": "Pending",
+      "gratuity": 0,
+      "totalCost": 0,
+      "takenByEmployeeId": 2,
+      "deliveredByEmployeeId": null,
+      "id": 32
+    },
+    {
+      "customerId": 17,
+      "orderTime": "2025-05-06T21:13:48.369Z",
+      "tableNumber": null,
+      "status": "Pending",
+      "gratuity": 0,
+      "totalCost": 0,
+      "takenByEmployeeId": 4,
+      "deliveredByEmployeeId": null,
+      "id": 33
+    }
+  ],
+  "sizes": [
+    {
+      "id": 1,
+      "name": "Kids",
+      "price": 6
+    },
+    {
+      "id": 2,
+      "name": "Small",
+      "price": 10
+    },
+    {
+      "id": 3,
+      "name": "Medium",
+      "price": 12.5
+    },
+    {
+      "id": 4,
+      "name": "Large",
+      "price": 15
+    },
+    {
+      "id": 5,
+      "name": "X Large",
+      "price": 18
+    }
+  ],
+  "cheeses": [
+    {
+      "id": 1,
+      "name": "Mozzarella"
+    },
+    {
+      "id": 2,
+      "name": "Buffalo Mozzarella"
+    },
+    {
+      "id": 3,
+      "name": "Four Cheese"
+    },
+    {
+      "id": 4,
+      "name": "Vegan"
+    },
+    {
+      "id": 5,
+      "name": "Ricotta"
+    },
+    {
+      "id": 6,
+      "name": "None"
+    }
+  ],
+  "sauces": [
+    {
+      "id": 1,
+      "name": "Marinara"
+    },
+    {
+      "id": 2,
+      "name": "Arrabbiata"
+    },
+    {
+      "id": 3,
+      "name": "Garlic White"
+    },
+    {
+      "id": 4,
+      "name": "Diavolo"
+    },
+    {
+      "id": 5,
+      "name": "None"
+    }
+  ],
+  "toppings": [
+    {
+      "id": 1,
+      "name": "Sausage",
+      "price": 1
+    },
+    {
+      "id": 2,
+      "name": "Pepperoni",
+      "price": 1
+    },
+    {
+      "id": 3,
+      "name": "Mushroom",
+      "price": 0.75
+    },
+    {
+      "id": 4,
+      "name": "Onion",
+      "price": 0.5
+    },
+    {
+      "id": 5,
+      "name": "Green pepper",
+      "price": 0.5
+    },
+    {
+      "id": 6,
+      "name": "Black olives",
+      "price": 0.75
+    },
+    {
+      "id": 7,
+      "name": "Basil",
+      "price": 0.5
+    },
+    {
+      "id": 8,
+      "name": "Extra cheese",
+      "price": 1
+    }
+  ],
+  "pizzas": [
+    {
+      "orderId": "14",
+      "sizeId": 1,
+      "sauceId": 3,
+      "cheeseId": 3,
+      "totalCost": 7.25,
+      "id": 1
+    },
+    {
+      "orderId": "32",
+      "sizeId": 2,
+      "sauceId": 2,
+      "cheeseId": 2,
+      "totalCost": 11.25,
+      "id": 2
+    },
+    {
+      "orderId": "32",
+      "sizeId": 2,
+      "sauceId": 2,
+      "cheeseId": 2,
+      "totalCost": 10.75,
+      "id": 3
+    },
+    {
+      "orderId": "33",
+      "sizeId": 2,
+      "sauceId": 2,
+      "cheeseId": 2,
+      "totalCost": 11.75,
+      "id": 4
+    }
+  ],
+  "pizzaToppings": [
+    {
+      "pizzaId": 1,
+      "toppingId": 3,
+      "id": 1
+    },
+    {
+      "pizzaId": 1,
+      "toppingId": 4,
+      "id": 2
+    },
+    {
+      "pizzaId": 2,
+      "toppingId": 3,
+      "id": 3
+    },
+    {
+      "pizzaId": 2,
+      "toppingId": 4,
+      "id": 4
+    },
+    {
+      "pizzaId": 3,
+      "toppingId": 3,
+      "id": 5
+    },
+    {
+      "pizzaId": 4,
+      "toppingId": 3,
+      "id": 6
+    },
+    {
+      "pizzaId": 4,
+      "toppingId": 2,
+      "id": 7
+    }
+  ]
+}

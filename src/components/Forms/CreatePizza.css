@@ -1,0 +1,94 @@
+.create-pizza-form {
+  display: flex;
+  margin: 2rem auto;
+  flex: 1;
+  flex-direction: column;
+  width: 80%;
+  border: 2px solid gray;
+  align-items: center;
+  padding: 15px;
+}
+h1 {
+  margin-bottom: 1rem;
+  text-align: center;
+  color: var(--font-color);
+}
+#pizza-selections {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  /* border: 5px solid black; */
+}
+
+#selections-and-img {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* border: 5px solid black; */
+  width: 90%;
+}
+
+#pizza-image {
+  display: flex;
+  align-items: start;
+  /* border: 5px solid black; */
+  width: 40%;
+  justify-content: start;
+  flex-direction: column;
+}
+.pizza-section {
+  display: flex;
+  padding: 20px;
+  width: 50%;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 5px solid black; */
+}
+
+#pizza-toppings {
+  display: flex;
+  flex-direction: column;
+  /* border: 5px solid black; */
+  align-items: start;
+  padding: 5px;
+}
+
+.pizza-label {
+  font-size: 20px;
+}
+.pizza-section select {
+  width: 70%;
+}
+
+.pizza-button {
+  width: 20%;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.topping-checkbox {
+  margin-right: 8px;
+}
+
+#cost-container {
+  display: flex;
+  margin-top: auto;
+}
+#cost {
+  border: 2px solid black;
+  height: fit-content;
+  width: 150%;
+  padding: 0 50px;
+  display: flex;
+  max-width: 100px;
+  flex: 1;
+  justify-content: center;
+}
+
+#cost-label {
+  display: flex;
+  margin-right: 10px;
+  margin-top: auto;
+  justify-content: end;
+  font-weight: bold;
+}

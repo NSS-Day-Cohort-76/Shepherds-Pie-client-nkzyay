@@ -1,0 +1,74 @@
+:root {
+  --primary-color: rgb(245, 116, 116);
+  --secondary-color: #f0f0f0;
+  --border-color: #ccc;
+  --font-color: #333;
+  --focus-color: rgb(214, 241, 228);
+  --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --border-radius: 6px;
+  --padding: 12px;
+  --margin: 12px 0;
+}
+
+.customer-info {
+  background-color: var(--secondary-color);
+  padding: 2rem;
+  max-width: 500px;
+  margin: 2rem auto;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  font-family: var(--font-family);
+  color: var(--font-color);
+}
+
+.customer-info h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.drop-down,
+.form-group {
+  margin: var(--margin);
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.form-control,
+select {
+  padding: var(--padding);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  background-color: #fff;
+  color: var(--font-color);
+}
+
+.form-control:focus,
+select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+button {
+  padding: var(--padding);
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 1rem;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+button:hover,
+button:focus {
+  background-color: var(--focus-color);
+}
