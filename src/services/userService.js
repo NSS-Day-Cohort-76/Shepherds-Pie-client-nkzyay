@@ -15,7 +15,9 @@ export const createUser = (user) => {
 };
 
 export const getUserById = (currentUserId) => {
-  return fetch(`https://shepherds-pie-backend-9.onrender.com/employees?id=${currentUserId}`).then(
+  return fetch(`/employees?id=${currentUserId}`).then(
     (res) => res.json()
   );
 };
+
+// https://shepherds-pie-backend-9.onrender.com
