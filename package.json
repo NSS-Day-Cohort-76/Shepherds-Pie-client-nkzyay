@@ -8,14 +8,18 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.3.5",
+    "json-server": "^1.0.0-beta.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router": "^7.5.3",
     "react-router-dom": "^6.21.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "@vitejs/plugin-react": "^4.2.1",
+    "gh-pages": "^6.3.0",
+    "vite": "^5.2.7"
   },
   "scripts": {
-    "start": "json-server --watch database.json --port 8000",
+    "start": "json-server --watch src/api/database.json --port 8000",
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview",
@@ -39,9 +43,5 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "@vitejs/plugin-react": "^4.2.1",
-    "gh-pages": "^6.3.0",
-    "vite": "^5.2.7"
-  }
+  "devDependencies": {}
 }

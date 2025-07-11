@@ -1,5 +1,5 @@
 export const createOrder = (order) => {
-    return fetch(`http://localhost:8088/orders`, {
+    return fetch(`http://https://shepherds-pie-backend-9.onrender.com/orders`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -9,7 +9,7 @@ export const createOrder = (order) => {
 }
 
 export const createCustomer = (customer) => {
-    return fetch(`http://localhost:8088/customers`, {
+    return fetch(`http://https://shepherds-pie-backend-9.onrender.com/customers`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
