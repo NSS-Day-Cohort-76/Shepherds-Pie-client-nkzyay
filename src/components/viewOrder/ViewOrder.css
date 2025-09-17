@@ -42,7 +42,9 @@
 }
 
 
-
+.complete-btn {
+  width: 100%;
+}
 .header-row {
   display: flex;
   justify-content: space-between;

@@ -196,7 +196,52 @@ export const CreatePizza = () => {
           </div>
         </div>
         <div id="pizza-image">
-          <img src="/src/img/pizza.svg" alt="Pizza"></img>
+          <div className="pizza-visual">
+            {/* Base pizza */}
+            <img
+              src="https://ik.imagekit.io/b0xq0alh4/Dom-Ino's/Untitled_Artwork-1.png?updatedAt=1746649954097"
+              alt="Base Pizza"
+              className="pizza-layer"
+            />
+
+            {/* Sauce image by URL */}
+            {pizza.sauceId !== 0 && (
+              <img
+                src={
+                  sauces.find((s) => s.id === pizza.sauceId)?.url || ""
+                }
+                alt="Sauce"
+                className="pizza-layer"
+              />
+            )}
+
+            {/* Cheese image by URL */}
+            {pizza.cheeseId !== 0 && (
+              <img
+                src={
+                  cheeses.find((c) => c.id === pizza.cheeseId)?.url || ""
+                }
+                alt="Cheese"
+                className="pizza-layer"
+              />
+            )}
+
+            {/* Topping images by URL */}
+            {selectedToppings.map((id) => {
+              const topping = toppings.find((t) => t.id === id);
+              return (
+                topping?.url && (
+                  <img
+                    key={id}
+                    src={topping.url}
+                    alt={topping.name}
+                    className="pizza-layer"
+                  />
+                )
+              );
+            })}
+          </div>
+
           <div id="cost-container">
             <div id="cost-label">Total Price: </div>
             <div id="cost">${cost.toFixed(2)}</div>

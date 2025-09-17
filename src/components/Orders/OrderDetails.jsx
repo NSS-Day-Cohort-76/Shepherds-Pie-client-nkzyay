@@ -133,17 +133,20 @@ export const OrderDetails = () => {
   };
   const handleSubmit = (e) => {
     if (e.target.name === "submit") {
+        const orderDate = new Date(order.orderTime);
+    const monthId = order.monthId || orderDate.getMonth() + 1;
+
       const updatedOrder = {
         id: order.id,
         customerId: order.customerId,
         order: order.orderTime,
         tableNumber: order.tableNumber,
         status: order.status,
-        gratuity: order.gratuity,
-        totalCost: order.totalCost,
+        gratuity: gratuity || 0,
+        totalCost: orderTotalWithTip,
         takenByEmployeeId: order.takenByEmployeeId,
-        deliveredByEmployeedId: order.deliveredByEmployeedId,
-        monthId: order.monthId,
+        deliveredByEmployeeId: order.deliveredByEmployeeId,
+        monthId: monthId,
       };
       updatedOrderWithTip(updatedOrder).then(() => {
         window.alert("Order details updated!");

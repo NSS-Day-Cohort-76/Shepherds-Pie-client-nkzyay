@@ -32,7 +32,7 @@ export const SalesReport = () => {
         <option>Month</option>
         {[
           ...new Set(
-            orders.map((order) => new Date(order.orderTime).getUTCMonth())
+            orders.map((order) => new Date(order.order).getUTCMonth())
           ),
         ]
           .sort((a, b) => a - b)
@@ -81,9 +81,9 @@ export const SalesReport = () => {
           </div>
           <fieldset>
             {[...filteredMonth]
-              .sort((a, b) => new Date(a.orderTime) - new Date(b.orderTime))
+              .sort((a, b) => new Date(a.order) - new Date(b.order))
               .map((obj, index) => {
-                const isoTime = obj.orderTime;
+                const isoTime = obj.order;
                 const localTime = new Date(isoTime).toLocaleString();
                 return (
                   <div className="sales-day" key={index}>
@@ -125,7 +125,7 @@ export const SalesReport = () => {
           <h1>Day-By-Day</h1>
           <fieldset>
             {orders.map((obj, index) => {
-              const isoTime = obj.orderTime;
+              const isoTime = obj.order;
               const localTime = new Date(isoTime).toLocaleString();
               return (
                 <div className="sales-day">

@@ -1,32 +1,35 @@
 import "./ViewOrder.css";
+import { useLocation } from "react-router-dom"
 import { useEffect, useState } from "react";
-import { getOrdersWithCustomer } from "../../services/orderService.jsx";
+import { getOrderDetailsById, getOrdersWithCustomer } from "../../services/orderService.jsx";
+import { assignEmployee, postEditedEmployee } from "../../services/employeeService"
 import { Link } from "react-router-dom";
 
 export const ViewOrder = () => {
+  const location = useLocation()
   const [orders, setOrders] = useState([]);
   const [month, setMonth] = useState(0); // 0 means "Today"
 
   useEffect(() => {
     getOrdersWithCustomer().then(setOrders);
-  }, []);
+  }, [location]);
 
   const isToday = (dateString) => {
     const orderDate = new Date(dateString);
     const today = new Date();
 
     return (
-      orderDate.getFullYear() === today.getFullYear() &&
-      orderDate.getMonth() === today.getMonth() &&
-      orderDate.getDate() === today.getDate()
+      orderDate.getUTCFullYear() === today.getUTCFullYear() &&
+      orderDate.getUTCMonth() === today.getUTCMonth() &&
+      orderDate.getUTCDate() === today.getUTCDate()
     );
   };
 
   const filteredOrders = orders.filter((order) => {
     if (month > 0) {
-      return new Date(order.orderTime).getUTCMonth() + 1 === month;
+      return new Date(order.order).getUTCMonth() + 1 === month;
     }
-    return isToday(order.orderTime);
+    return isToday(order.order);
   });
 
   const formatDate = (givenDate) => {
@@ -36,6 +39,24 @@ export const ViewOrder = () => {
       day: "numeric",
     });
   };
+
+
+
+  const handleComplete = (employee) => {
+    const updatedEmployee = { ...employee, isAssigned: false }
+
+    postEditedEmployee(updatedEmployee)
+      .then((order) => {
+        const updatedOrder = {
+          ...order,
+          status: "Completed",
+        };
+        return assignEmployee(order.id, updatedOrder)
+      })
+     
+  };
+
+
 
   return (
     <div className="view-orders-container">
@@ -47,7 +68,10 @@ export const ViewOrder = () => {
           <option value="0">Today</option>
           {[
             ...new Set(
-              orders.map((order) => new Date(order.orderTime).getUTCMonth())
+              orders
+                .map((order) => new Date(order.order))
+                .filter((date) => !isNaN(date))
+                .map((date) => date.getUTCMonth())
             ),
           ]
             .sort((a, b) => a - b)
@@ -74,7 +98,7 @@ export const ViewOrder = () => {
           style={{ marginBottom: "1rem" }}
         >
           <div>
-            <h3>Order Time: {order.orderTime}</h3>
+            <h3>Order Time: {order.order}</h3>
           </div>
           <div>
             <Link to={`/OrderDetails/${order.id}`}>
@@ -86,10 +110,14 @@ export const ViewOrder = () => {
           </div>
           <div className="order-status">
             <h3>Status:</h3>
-            <select className="order-status">
-              <option>{order.status}</option>
-              <option>Completed</option>
-            </select>
+            {order.status}
+          </div>
+          <div>
+            <button
+              className="complete-btn"
+              onClick={() => handleComplete(order)}
+              disabled={order.status === "Completed"}
+            >Complete</button>
           </div>
         </fieldset>
       ))}

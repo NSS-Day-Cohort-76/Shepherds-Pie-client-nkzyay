@@ -32,7 +32,16 @@ h1 {
   display: flex;
   align-items: start;
   /* border: 5px solid black; */
-  width: 40%;
+  width: 500px;
+  /* justify-content: center;
+  /* flex-direction: column;  */
+}
+
+#pizza-image img {
+  display: flex;
+  align-items: start;
+  /* border: 5px solid black; */
+  width: 500px;
   justify-content: start;
   flex-direction: column;
 }
@@ -91,4 +100,29 @@ h1 {
   margin-top: auto;
   justify-content: end;
   font-weight: bold;
+}
+
+.pizza-visual {
+  position: relative;
+  width: 300px;
+  height: auto;
+}
+
+.pizza-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  animation: toppingsAnim 2s ease 0s 1 normal forwards;
+  pointer-events: none;
+}
+
+@keyframes toppingsAnim {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
 }
